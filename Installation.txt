@@ -1,0 +1,40 @@
+ANGULLAR INSTALLATION
+=======================
+
+Angular installation=
+    =======================
+    1) Node js installation
+          check: npm -v
+                 node -v
+
+    2) Angular installation
+
+        npm install -g @angular/cli@15
+
+        check: ng version
+
+    3) Create an angular application
+         -open command promt
+         -cd Desktop
+         -ng new my-app
+
+                 Routing-y
+                 css
+
+4) Run Angular application in  vs code
+	
+	ng serve in Vs code Terminal
+	check:http://localhost:4200/
+
+	if error occurs,
+
+    open powershell as an administor.
+      set executionpolicy unrestricted.
+
+
+ To create a component... ng g c in terminal
+	termonal shortcut crtl+j
+
+
+
+
