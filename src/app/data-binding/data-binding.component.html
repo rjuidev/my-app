@@ -1,0 +1,50 @@
+<h1>Data binding</h1>
+
+<!-- 4 types
+
+1. EVENT BINDING (),
+2.PROPERTY BINDING [],
+3. INTERPOLATIONS{},
+4. TWOWAY DATA BINDING [()] -->
+
+<!-- <label for="">Name:</label>
+<input type="text"> <br>
+<label for="">Email:</label> 
+<input type="email"> <br>
+<label for="">Mobile</label>
+<input type="number"> <br> -->
+
+<!-- event binding -->
+
+<!-- disbled is a property binding -->
+
+<button [disabled]="isIndian" (click)="submit()">Submit</button>
+<input type="text"(keyup)="typing()">
+
+<!-- interpolations -->
+
+ <!-- (Through strings) -->
+
+<h3>{{name}}</h3>
+<h3>{{age}}</h3>
+<h3>{{email}}</h3>
+
+
+
+<!-- data showing using Objects -->
+
+<h3>{{user.name}}</h3>
+<h3>{{user.age}}</h3>
+<h3>{{user.email}}</h3>
+
+
+<h3>All data types examples</h3>
+
+
+<label for="">num1</label>
+<input type="number"[(ngModel)]="num1">
+<label for="">num2</label>
+<input type="number" [(ngModel)]="num2">
+<button [disabled]="!num1 || !num2" (click)="sum()">sum</button>
+
+<h2>sum is {{result}}</h2>
