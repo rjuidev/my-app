@@ -1,5 +1,20 @@
- <label for="">Username</label>
- <input type="text"> <br>
- <label for="">Password</label>
- <input type="password"> <br>
- <button routerLink="dashboard" >Login</button>
+
+<div class="parent">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="" [formGroup]="loginForm"  >
+                <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="text" id="email" placeholder="Enter your username" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" formControlName="password">
+                </div>
+                <button type="submit"  (click)="login()">Login</button>
+            </form>
+            <div class="form-footer">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+</div>

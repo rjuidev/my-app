@@ -8,7 +8,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeeComponent } from './employee/employee.component';
+import { HttpClientModule } from "@angular/common/http";
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,12 +22,16 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     HomeComponent,
     ErrorComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    EmployeeComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

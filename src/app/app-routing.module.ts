@@ -5,12 +5,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'',component:LoginComponent },
-  {path:'dashboard',component:DashboardComponent,children:[
-  {path:'home',component:HomeComponent },{path:'data-binding',component:DataBindingComponent },
+  {path:'dashboard',canActivate:[AuthenticationGuard],component:DashboardComponent,children:[
+  {path:'home',canActivate:[AuthenticationGuard],component:HomeComponent },{path:'data-binding',canActivate:[AuthenticationGuard],component:DataBindingComponent },
   
   
   ] },
@@ -18,6 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
